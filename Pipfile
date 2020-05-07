@@ -8,6 +8,7 @@ black = "*"
 mypy = "*"
 pylint = "*"
 pytest = "*"
+pytest-watch = "*"
 
 [packages]
 flask = "*"

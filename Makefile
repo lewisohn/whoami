@@ -1,5 +1,5 @@
 IMAGE=lewisohn/whoami
-VERSION=0.1.5
+VERSION=0.1.6
 
 build:
 	docker build -t $(IMAGE):$(VERSION) .

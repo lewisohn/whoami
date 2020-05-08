@@ -12,13 +12,7 @@ push:
 run:
 	docker run -d -p 8000:5000 --rm --name "whoami" $(IMAGE):$(VERSION)
 
-deploy:
-	sed 's/_WHOAMI_VERSION_/$(VERSION)/g' stack.yaml | \
-		docker stack deploy --compose-file - whoami
-
 kube:
-	kubectl create -f svc.yaml
-	sed 's/_WHOAMI_VERSION_/$(VERSION)/g' dep.yaml | \
-		kubectl create -f -
+	kubectl create -f svc.yaml 
+	kubectl create -f dep.yaml
 
-update: build deploy

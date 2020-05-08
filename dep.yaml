@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: whoami-pod
-        image: lewisohn/whoami:_WHOAMI_VERSION_
+        image: lewisohn/whoami:0.1.6
         ports:
           - containerPort: 5000

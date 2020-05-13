@@ -12,4 +12,4 @@ jobs:
       - get: resource-whoami
         trigger: true
       - task: run-tests
-        file: whoami/ci/run-tests.yaml
+        file: resource-whoami/ci/run-tests.yaml

@@ -7,13 +7,15 @@ resources:
 - name: timer-whoami
   type: time
   source:
-    interval: 1m
+    interval: 5m
 
 jobs:
   - name: job-whoami
     public: true
     plan:
       - get: resource-whoami
+        trigger: true
+      - get: timer-whoami
         trigger: true
       - task: run-tests
         file: resource-whoami/ci/run-tests.yaml

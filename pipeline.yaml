@@ -4,6 +4,10 @@ resources:
   source:
     uri: https://github.com/lewisohn/whoami.git
     branch: master
+- name: timer-whoami
+  type: time
+  source:
+    interval: 1m
 
 jobs:
   - name: job-whoami

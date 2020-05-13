@@ -1,21 +1,15 @@
 resources:
-- name: resource-whoami
+- name: app-whoami
   type: git
   source:
     uri: https://github.com/lewisohn/whoami.git
     branch: master
-- name: timer-whoami
-  type: time
-  source:
-    interval: 5m
 
 jobs:
   - name: job-whoami
     public: true
     plan:
-      - get: resource-whoami
-        trigger: true
-      - get: timer-whoami
+      - get: app-whoami
         trigger: true
       - task: run-tests
-        file: resource-whoami/ci/run-tests.yaml
+        file: app-whoami/ci/run-tests.yaml

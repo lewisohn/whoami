@@ -8,9 +8,9 @@ image_resource:
       tag: 3.8.2-buster
 
 inputs:
-  - name: resource-whoami
+  - name: app-whoami
 
 run:
   path: /bin/sh
   args: [./ci/run-tests.sh]
-  dir: resource-whoami
+  dir: app-whoami

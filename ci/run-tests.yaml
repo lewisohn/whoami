@@ -8,7 +8,7 @@ image_resource:
       tag: 3.8.2-buster
 
 inputs:
-  - name: run-tests
+  - name: ci
 
 run:
-  path: ./tasks/run-tests.sh
+  path: ./ci/run-tests.sh

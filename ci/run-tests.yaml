@@ -13,4 +13,4 @@ inputs:
 run:
   path: /bin/sh
   args: [./ci/run-tests.sh]
-  dir: resrouce-whoami
+  dir: resource-whoami

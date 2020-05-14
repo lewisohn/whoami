@@ -9,7 +9,9 @@ jobs:
   - name: job-whoami
     public: true
     plan:
-      - get: app-whoami
-        trigger: true
-      - task: run-tests
-        file: app-whoami/ci/run-tests.yaml
+    - get: app-whoami
+      trigger: true
+    - task: run-tests
+      file: app-whoami/ci/run-tests.yaml
+    - task: dockerize
+      file: app-whoami/ci/dockerize.yaml

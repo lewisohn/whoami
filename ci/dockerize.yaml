@@ -1,0 +1,16 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+      repository: docker
+      tag: 19.03.8-dind
+
+inputs:
+  - name: app-whoami
+
+run:
+  path: /bin/sh
+  args: [./ci/dockerize.sh]
+  dir: app-whoami

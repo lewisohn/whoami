@@ -1,4 +1,4 @@
-IMAGE=verifa/whoami
+IMAGE=lewisohn/whoami
 VERSION=0.1.6
 
 build:

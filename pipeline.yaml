@@ -5,6 +5,11 @@ resources:
     uri: https://github.com/lewisohn/whoami.git
     branch: master
 
+- name: docker-hub
+  type: docker-image
+  source:
+      repository: lewisohn/whoami
+
 jobs:
   - name: job-whoami
     public: true
@@ -13,5 +18,4 @@ jobs:
       trigger: true
     - task: run-tests
       file: app-whoami/ci/run-tests.yaml
-    - task: dockerize
-      file: app-whoami/ci/dockerize.yaml
+    - put: docker-hub

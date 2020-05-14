@@ -1,5 +1,6 @@
 #!/bin/bash
-pwd
+ls -a
+systemctl start docker
 docker build -t lewisohn/whoami:0.1.6
 docker push lewisohn/whoami:0.1.6
 docker tag lewisohn/whoami:0.1.6 lewisohn/whoami:latest
